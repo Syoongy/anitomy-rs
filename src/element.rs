@@ -31,6 +31,7 @@ pub enum ElementKind {
     VideoResolution,
     VideoTerm,
     Volume,
+    Part,
     Year,
     Date,
 }
@@ -59,6 +60,7 @@ impl ElementKind {
             ElementKind::VideoResolution => "Video Resolution",
             ElementKind::VideoTerm => "Video Term",
             ElementKind::Volume => "Volume",
+            ElementKind::Part => "Part",
             ElementKind::Year => "Year",
             ElementKind::Date => "Date",
         }
@@ -215,6 +217,11 @@ pub struct ElementObject<'a> {
         feature = "serde",
         serde(borrow, default, skip_serializing_if = "Option::is_none")
     )]
+    pub part: Option<Cow<'a, str>>,
+    #[cfg_attr(
+        feature = "serde",
+        serde(borrow, default, skip_serializing_if = "Option::is_none")
+    )]
     pub year: Option<Cow<'a, str>>,
     #[cfg_attr(
         feature = "serde",
@@ -339,6 +346,11 @@ pub struct OwnedElementObject {
         feature = "serde",
         serde(default, skip_serializing_if = "Option::is_none")
     )]
+    pub part: Option<String>,
+    #[cfg_attr(
+        feature = "serde",
+        serde(default, skip_serializing_if = "Option::is_none")
+    )]
     pub year: Option<String>,
     #[cfg_attr(
         feature = "serde",
@@ -429,6 +441,7 @@ impl_from_iterator! {
     VideoResolution => video_resolution,
     VideoTerm => video_term,
     Volume => volume,
+    Part => part,
     Year => year,
     Date => date,
 }

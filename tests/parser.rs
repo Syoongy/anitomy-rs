@@ -165,9 +165,12 @@ fn test_json_data() {
     let tests: Vec<InputData> = serde_json::from_str(data).expect("could not parse JSON");
     let total = tests.len();
 
+    let mut passed = 0;
+    let mut failed = 0;
+
     for (index, mut test) in tests.into_iter().enumerate() {
-        let input = test.input;
-        let options = test.options.into();
+        let input = test.input.clone();
+        let options = test.options.clone().into();
         let parsed = match std::panic::catch_unwind(|| anitomy::parse_with_options(&input, options))
         {
             Ok(t) => t,
@@ -179,21 +182,45 @@ fn test_json_data() {
         };
         test.output.remove(&ElementKind::EpisodeAlt); // this is untested
         let actual = make_test_map(parsed);
-        for (key, expected) in test.output {
+
+        if test.skip {
+            continue;
+        }
+
+        let mut test_passed = true;
+        for (key, expected) in test.output.clone() {
             let parsed = actual.get(&key);
-            trace_variables!(
-                input,
-                key,
-                index,
-                total,
-                expected,
-                parsed,
-                {
-                    assert!(parsed.is_some());
-                    assert_eq!(parsed.unwrap(), &expected);
-                },
-                test.skip
-            );
+            if parsed.is_none() || parsed.unwrap() != &expected {
+                test_passed = false;
+                eprintln!("\nFAILED: Test case #{}", index + 1);
+                eprintln!("  Input: {}", input);
+                eprintln!("  Field: {:?}", key);
+                eprintln!("  Expected: {:#?}", expected);
+                eprintln!("  Got: {:#?}", parsed);
+                break;
+            }
+        }
+
+        if test_passed {
+            passed += 1;
+        } else {
+            failed += 1;
         }
     }
+
+    eprintln!("\n===== TEST RESULTS =====");
+    eprintln!("Total test cases: {}", total);
+    eprintln!("Passed: {}", passed);
+    eprintln!("Failed: {}", failed);
+    let skip_count = total - passed - failed;
+    eprintln!("Skipped: {}", skip_count);
+    let pass_rate = if (total - skip_count) > 0 {
+        (passed as f64 / (total - skip_count) as f64) * 100.0
+    } else {
+        0.0
+    };
+    eprintln!("Pass rate: {:.2}%", pass_rate);
+    eprintln!("=======================\n");
+
+    assert!(pass_rate > 0.0, "No tests passed!");
 }

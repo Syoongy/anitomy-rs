@@ -12,6 +12,7 @@ pub(crate) enum KeywordKind {
     FileExtension,
     Language,
     Other,
+    Part,
     ReleaseGroup,
     ReleaseInformation,
     ReleaseVersion,
@@ -349,4 +350,9 @@ pub(crate) static KEYWORDS: phf::Map<&'static UncasedStr, Keyword> = phf_map! {
     // Volume
     UncasedStr::new("Vol")          =>    Keyword::new(KeywordKind::Volume),
     UncasedStr::new("Volume")       =>    Keyword::new(KeywordKind::Volume),
+
+    // Part
+    UncasedStr::new("Cour")         =>    Keyword::new(KeywordKind::Part),
+    UncasedStr::new("Part")         =>    Keyword::new(KeywordKind::Part),
+    UncasedStr::new("Parte")         =>    Keyword::new(KeywordKind::Part),
 };

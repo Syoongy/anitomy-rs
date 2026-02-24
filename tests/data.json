@@ -202,6 +202,7 @@
             "video_term": "x264",
             "audio_term": "aac",
             "language": "Jpn",
+            "subtitles": "Sub",
             "file_extension": "mkv"
         }
     },
@@ -254,17 +255,20 @@
             "source": "BD",
             "video_term": "h264",
             "video_resolution": "720p",
-            "audio_term": "TrueHD5.1",
+            "audio_term": [
+                "TrueHD",
+                "5.1"
+            ],
             "file_checksum": "9F311DAB",
             "file_extension": "mkv"
         }
     },
     {
-        "input": "[ValdikSS]_First_Squad_The_Morment_Of_Truth_[720x576_h264_dvdscr_eng_hardsub].mkv",
+        "input": "[ValdikSS]_First_Squad_The_Moment_Of_Truth_[720x576_h264_dvdscr_eng_hardsub].mkv",
         "mal_id": 5178,
         "output": {
             "release_group": "ValdikSS",
-            "title": "First Squad The Morment Of Truth",
+            "title": "First Squad The Moment Of Truth",
             "video_resolution": "720x576",
             "video_term": "h264",
             "language": "eng",
@@ -282,7 +286,7 @@
             "type": "TV",
             "episode": "20",
             "source": "HDTV",
-            "release_group": "Varies_&_Cuba77_&_AnimeReactor_RU",
+            "release_group": "Varies & Cuba77 & AnimeReactor RU",
             "file_extension": "mkv"
         }
     },
@@ -372,7 +376,7 @@
         "output": {
             "title": "Noein",
             "episode": "01",
-            "release_group": "bodlerov_&_torrents_ru",
+            "release_group": "bodlerov & torrents ru",
             "file_extension": "mkv"
         }
     },
@@ -411,6 +415,7 @@
             "title": "R.O.D the TV",
             "type": "TV",
             "episode": "01",
+            "video_term": "divx",
             "file_extension": "mkv"
         }
     },
@@ -953,7 +958,10 @@
             "episode_title": "A Stormy Summer Vacation Part 1",
             "source": "BD",
             "video_resolution": "1080p",
-            "audio_term": "FLAC",
+            "audio_term": [
+                "Dual_Audio",
+                "FLAC"
+            ],
             "video_term": "Hi10p",
             "file_checksum": "8A45634B",
             "file_extension": "mkv"
@@ -965,6 +973,7 @@
         "output": {
             "release_group": "Hien",
             "title": "Kotoura-san - Special Short Anime 'Haruka's Room'",
+            "type": "Special",
             "episode": "01",
             "source": "BD",
             "video_resolution": "1080p",
@@ -1154,6 +1163,7 @@
                 "AAC",
                 "5.1ch"
             ],
+            "subtitles": "Sub",
             "file_extension": "mp4"
         }
     },
@@ -1241,7 +1251,8 @@
             "video_term": "AVC",
             "audio_term": [
                 "AACx2",
-                "5.1"
+                "5.1",
+                "2.0"
             ],
             "file_extension": "mp4"
         }
@@ -1274,7 +1285,9 @@
             "video_term": "AVC",
             "audio_term": [
                 "AACx3",
-                "5.1"
+                "5.1",
+                "2.0",
+                "2.0"
             ],
             "file_extension": "mp4"
         }
@@ -1357,7 +1370,7 @@
         "mal_id": 18041,
         "output": {
             "release_group": "Asenshi",
-            "title": "Rozen Maiden 3",
+            "title": "Rozen Maiden 3 - PV",
             "type": "PV",
             "file_checksum": "CA57F300",
             "file_extension": "mkv"
@@ -1419,9 +1432,9 @@
     },
     {
         "input": "DRAMAtical Murder Episode 1 - Data_01_Login",
-        "mal_id": 23333,
         "skip": true,
         "notes": "This test assumes the episode title keeps the delimiters, but the code does not.",
+        "mal_id": 23333,
         "output": {
             "title": "DRAMAtical Murder",
             "episode": "1",
@@ -1467,9 +1480,9 @@
     },
     {
         "input": "[UTW]_Accel_World_-_EX01_[BD][h264-720p_AAC][3E56EE18].mkv",
-        "mal_id": 13939,
         "skip": true,
         "notes": "This one encodes the episode in a weird way",
+        "mal_id": 13939,
         "output": {
             "release_group": "UTW",
             "title": "Accel World - EX",
@@ -1520,8 +1533,8 @@
                 "1",
                 "13"
             ],
-            "source": "Blu-Ray",
             "video_resolution": "1280×720",
+            "source": "Blu-Ray",
             "audio_term": "FLAC"
         }
     },
@@ -1624,8 +1637,6 @@
     },
     {
         "input": "The iDOLM@STER 765 Pro to Iu Monogatari.mkv",
-        "skip": true,
-        "notes": "Ambiguous parsing, i.e. number can be an episode number",
         "mal_id": 11889,
         "output": {
             "title": "The iDOLM@STER 765 Pro to Iu Monogatari",
@@ -1685,8 +1696,6 @@
     },
     {
         "input": "[SpoonSubs]_Hidamari_Sketch_x365_-_04.1_(DVD)[B6CE8458].mkv",
-        "skip": true,
-        "notes": "Fractional episodes that aren't 0.5 aren't allowed",
         "mal_id": 3604,
         "output": {
             "release_group": "SpoonSubs",
@@ -1700,8 +1709,6 @@
     {
         "input": "Ep. 01 - The Boy in the Iceberg",
         "mal_id": 0,
-        "skip": true,
-        "notes": "Ambiguous whether it's an episode or anime title",
         "output": {
             "episode": "01",
             "episode_title": "The Boy in the Iceberg"
@@ -1798,14 +1805,16 @@
     {
         "input": "[B-G_&_m.3.3.w]_Myself_Yourself_12.DVD(H.264_DD2.0)_[CB2B37F1].mkv",
         "mal_id": 2926,
-        "notes": "This is modified from upstream, the group name keeps delimiters.",
         "output": {
-            "release_group": "B-G_&_m.3.3.w",
+            "release_group": "B-G & m.3.3.w",
             "title": "Myself Yourself",
             "episode": "12",
             "source": "DVD",
             "video_term": "H.264",
-            "audio_term": "DD2.0",
+            "audio_term": [
+                "DD",
+                "2.0"
+            ],
             "file_checksum": "CB2B37F1",
             "file_extension": "mkv"
         }
@@ -1900,8 +1909,6 @@
     },
     {
         "input": "[ReDone] Memories Off 3.5 - 04 (DVD 10-bit).mkv",
-        "skip": true,
-        "notes": "The 3.5 is unfortunately ambiguous, either it's the title or it's the episode number.",
         "mal_id": 363,
         "output": {
             "release_group": "ReDone",
@@ -1930,7 +1937,6 @@
     {
         "input": "Byousoku 5 Centimeter [Blu-Ray][1920x1080 H.264][2.0ch AAC][SOFTSUBS]",
         "mal_id": 1689,
-        "notes": "Unfortunately ambiguous, the number can either be an episode number or a title",
         "output": {
             "title": "Byousoku 5 Centimeter",
             "source": "Blu-Ray",
@@ -1941,9 +1947,6 @@
                 "AAC"
             ],
             "subtitles": "SOFTSUBS"
-        },
-        "options": {
-            "episode": false
         }
     },
     {
@@ -2020,7 +2023,8 @@
         "mal_id": 25729,
         "output": {
             "release_group": "Nishi-Taku",
-            "title": "Tamayura ~graduation photo~ Movie Part 1",
+            "title": "Tamayura ~graduation photo~ Movie",
+            "part": "1",
             "type": "Movie",
             "source": "BD",
             "video_resolution": "720p",
@@ -2031,22 +2035,16 @@
     {
         "input": "[LRL] 1001 Nights (1998) [DVD]",
         "mal_id": 3914,
-        "notes": "The 1001 is ambiguous as either an episode or a title. Since this is a movie, there are no episodes to parse though",
         "output": {
             "release_group": "LRL",
             "title": "1001 Nights",
             "year": "1998",
             "source": "DVD"
-        },
-        "options": {
-            "episode": false
         }
     },
     {
         "input": "[TardRaws] 0 [640x360].mkv",
         "mal_id": 20707,
-        "skip": true,
-        "notes": "This is ambiguous, other parsers can handle it though. The 0 is either a title or an episode number",
         "output": {
             "release_group": "TardRaws",
             "title": "0",
@@ -2061,7 +2059,7 @@
             "release_group": "FB",
             "title": "Crayon Shin-Chan Movie 2 The Secret of Buri Buri Kingdom",
             "type": "Movie",
-            "video_term": "DivX5",
+            "video_term": "DivX",
             "audio_term": "AC3",
             "year": "1994",
             "video_resolution": "852X480",
@@ -2296,8 +2294,6 @@
     {
         "input": "Fairy Tail - S06E32 - Tartaros Arc Iron Fist of the Fire Dragon [Episode 83]",
         "mal_id": 6702,
-        "skip": true,
-        "notes": "While the normal version of anitomy can handle this, I don't think the work required to support this is worth it.",
         "output": {
             "title": "Fairy Tail",
             "season": "06",
@@ -2308,8 +2304,6 @@
     },
     {
         "input": "Noragami - S02E06 - What Must Be Done [Episode 6]",
-        "skip": true,
-        "notes": "While the normal version of anitomy can handle this, I don't think the work required to support this is worth it.",
         "mal_id": 30503,
         "output": {
             "title": "Noragami",
@@ -2357,8 +2351,6 @@
     },
     {
         "input": "Dragon_Ball_Z_Movies_8_&_10_[720p,BluRay,DTS,x264]_-_THORA",
-        "skip": true,
-        "notes": "Fixing this would mean breaking other cases, so I'm not gonna do it",
         "mal_id": [
             901,
             903
@@ -2397,7 +2389,8 @@
             "title": "Nintama Rantarou",
             "season": "23",
             "episode": "1821",
-            "episode_title": "Buddhist Priest-sama is a Ninja"
+            "episode_title": "Buddhist Priest-sama is a Ninja",
+            "file_extension": "mkv"
         }
     },
     {
@@ -2408,29 +2401,29 @@
             "title": "Aharen-san wa Hakarenai",
             "season": "01",
             "episode": "06",
-            "release_version": "2"
+            "release_version": "2",
+            "file_extension": "mkv"
         }
     },
     {
         "input": "[0x539] Somali and the Forest Spirit - S01E01 (WEB 1080p Hi10P AAC) [BB7C6531].mkv",
         "mal_id": 39575,
         "output": {
-            "season": "01",
-            "title": "Somali and the Forest Spirit",
-            "audio_term": "AAC",
-            "episode": "01",
-            "file_checksum": "BB7C6531",
             "release_group": "0x539",
+            "title": "Somali and the Forest Spirit",
+            "season": "01",
+            "episode": "01",
+            "source": "WEB",
             "video_resolution": "1080p",
             "video_term": "Hi10P",
+            "audio_term": "AAC",
+            "file_checksum": "BB7C6531",
             "file_extension": "mkv"
         }
     },
     {
         "input": "05 - Hidan no Aria - Butei Charter Article 1 - [UTW](E7724B68).mkv",
         "mal_id": 8630,
-        "skip": true,
-        "notes": "I don't actually know how this one fails currently",
         "output": {
             "episode": "05",
             "title": "Hidan no Aria",
@@ -2441,20 +2434,37 @@
         }
     },
     {
-        "input": "Piano no Mori (TV) 2nd Season - 01",
+        "input": "[Erai-raws] Piano no Mori (TV) - 01 ~ 12 [720p][Multiple Subtitle]",
+        "mal_id": 36652,
+        "output": {
+            "release_group": "Erai-raws",
+            "title": "Piano no Mori",
+            "type": "TV",
+            "episode": [
+                "01",
+                "12"
+            ],
+            "video_resolution": "720p",
+            "subtitles": "Multiple Subtitle"
+        }
+    },
+    {
+        "input": "[Erai-raws] Piano no Mori (TV) 2nd Season - 01 [720p][Multiple Subtitle].mkv",
         "mal_id": 37975,
         "output": {
+            "release_group": "Erai-raws",
             "title": "Piano no Mori",
             "type": "TV",
             "season": "2",
-            "episode": "01"
+            "episode": "01",
+            "video_resolution": "720p",
+            "subtitles": "Multiple Subtitle",
+            "file_extension": "mkv"
         }
     },
     {
         "input": "Piano no Mori 2 (TV)",
         "mal_id": 37975,
-        "skip": true,
-        "notes": "Impossible to parse, the 2 is ambiguous and resolves as the episode number",
         "output": {
             "title": "Piano no Mori",
             "season": "2",
@@ -2525,8 +2535,6 @@
     {
         "input": "[bonkai77].Basilisk.Episode.18.A.Dawn.Without.Light.[BD.1080p.Dual.Audio.x265].mkv",
         "mal_id": 67,
-        "skip": true,
-        "notes": "Dual Audio separated with dots is not parsed currently.",
         "output": {
             "release_group": "bonkai77",
             "title": "Basilisk",
@@ -2534,7 +2542,7 @@
             "episode_title": "A Dawn Without Light",
             "source": "BD",
             "video_resolution": "1080p",
-            "audio_term": "Dual Audio",
+            "audio_term": "Dual.Audio",
             "video_term": "x265",
             "file_extension": "mkv"
         }
@@ -2551,8 +2559,6 @@
     {
         "input": "Detective-Conan-656 Professor's Video Site (Part 1)",
         "mal_id": 235,
-        "skip": true,
-        "notes": "The (Part 1) is parsed as a release group currently.",
         "output": {
             "title": "Detective Conan",
             "episode": "656",
@@ -2572,8 +2578,6 @@
     {
         "input": "S01E01-Senpai is a bit ..., Senpai, don't you ever get angry [72FF1098].mkv",
         "mal_id": 0,
-        "skip": true,
-        "notes": "This is parsed as a series title, it's an impossible parse.",
         "output": {
             "season": "01",
             "episode": "01",
@@ -2633,8 +2637,7 @@
             "title": "NieR Automata Ver1.1a",
             "season": "01",
             "episode": "10",
-            "language": "English",
-            "subtitles": "Dub",
+            "audio_term": "English Dub",
             "source": [
                 "CR",
                 "WEB-DL"
@@ -2645,8 +2648,6 @@
     },
     {
         "input": "The.Eminence.in.Shadow.S01E05.I.Am....1080p.BluRay.DD2.0.x265-ExCaLiBuR.mkv",
-        "skip": true,
-        "notes": "The dots in the episode title are not parsed correctly.",
         "mal_id": 48316,
         "output": {
             "title": "The Eminence in Shadow",
@@ -2655,7 +2656,10 @@
             "episode_title": "I Am...",
             "video_resolution": "1080p",
             "source": "BluRay",
-            "audio_term": "DD2.0",
+            "audio_term": [
+                "DD",
+                "2.0"
+            ],
             "video_term": "x265",
             "release_group": "ExCaLiBuR",
             "file_extension": "mkv"
@@ -2671,7 +2675,10 @@
             "episode_title": "A Fencing Tournament of Intrigue & Bloodshed",
             "video_resolution": "1080p",
             "source": "BluRay",
-            "audio_term": "DD2.0",
+            "audio_term": [
+                "DD",
+                "2.0"
+            ],
             "video_term": "x265",
             "release_group": "ExCaLiBuR",
             "file_extension": "mkv"
@@ -2703,8 +2710,10 @@
         "output": {
             "release_group": "DeadFish",
             "title": "Boku no Imouto wa \"Osaka Okan\": Uchi no Onii-chan wa Tokyo Rule - Special",
+            "type": "Special",
             "source": "BD",
             "video_resolution": "720p",
+            "audio_term": "AAC",
             "file_extension": "mp4"
         }
     },
@@ -2737,6 +2746,7 @@
                 "03",
                 "04"
             ],
+            "type": "Specials",
             "source": "BD",
             "audio_term": [
                 "Dual Audio",
@@ -2767,67 +2777,707 @@
         }
     },
     {
-        "input": "I.Got.a.Cheat.Skill.in.Another.World.and.Became.Unrivaled.in.the.Real.World,.Too.S01E01.WEBRip.Netflix.ja[cc].srt",
+        "input": "[xPearse] Great Mazinger - Episode 55 Preview [English Sub] [480p].mkv",
+        "mal_id": 5658,
         "output": {
-            "title": "I Got a Cheat Skill in Another World and Became Unrivaled in the Real World, Too",
+            "release_group": "xPearse",
+            "title": "Great Mazinger",
+            "episode": "55",
+            "type": "Preview",
+            "language": "English",
+            "subtitles": "Sub",
+            "video_resolution": "480p",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "Dororo to Hyakkimaru ep 1-6 [480p Hi10p DVD][kuchikirukia] RAW",
+        "mal_id": 5760,
+        "output": {
+            "title": "Dororo to Hyakkimaru",
+            "episode": [
+                "1",
+                "6"
+            ],
+            "video_resolution": "480p",
+            "video_term": "Hi10p",
+            "source": "DVD",
+            "release_group": "kuchikirukia",
+            "subtitles": "RAW"
+        }
+    },
+    {
+        "input": "[SubsPlease] Fairy Tail - 100 Years Quest - 01 (1080p) [1107F3A9].mkv",
+        "mal_id": 49785,
+        "output": {
+            "release_group": "SubsPlease",
+            "title": "Fairy Tail - 100 Years Quest",
+            "episode": "01",
+            "video_resolution": "1080p",
+            "file_checksum": "1107F3A9",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "[SubsPlus+] 2.5 Dimensional Seduction - S01E01 (CR WEB 1080p AVC EAC3) [388F142A].mkv",
+        "mal_id": 53802,
+        "output": {
+            "release_group": "SubsPlus+",
+            "title": "2.5 Dimensional Seduction",
             "season": "01",
             "episode": "01",
             "source": [
-                "WEBRip",
-                "Netflix"
+                "CR",
+                "WEB"
             ],
-            "language": "ja",
-            "subtitles": "cc",
-            "file_extension": "srt"
+            "video_resolution": "1080p",
+            "video_term": "AVC",
+            "audio_term": "EAC3",
+            "file_checksum": "388F142A",
+            "file_extension": "mkv"
         }
     },
     {
-        "input": "ホリミヤ-piece- #11「チョコレート」-2023-09-10-JPTVclub.srt",
-        "notes": "The title is missing a -, this is because it's stripped from the end of the string and removing it would break other series",
+        "input": "I.Have.a.Crush.at.Work.S01E01.Dont.Let.Anyone.Find.Out.1080p.B-Global.WEB-DL.JPN.AAC2.0.H.265.MSubs-ToonsHub.mkv",
+        "mal_id": 59361,
         "output": {
-            "title": "ホリミヤ-piece",
-            "episode": "11",
-            "episode_title": "チョコレート",
-            "date": "2023-09-10",
-            "release_group": "JPTVclub",
-            "file_extension": "srt"
-        }
-    },
-    {
-        "input": "Hibike Euphonium S03EP01.srt",
-        "output": {
-            "title": "Hibike Euphonium",
-            "season": "03",
+            "title": "I Have a Crush at Work",
+            "season": "01",
             "episode": "01",
-            "file_extension": "srt"
+            "episode_title": "Dont Let Anyone Find Out",
+            "video_resolution": "1080p",
+            "source": "WEB-DL",
+            "language": "JPN",
+            "audio_term": [
+                "AAC",
+                "2.0"
+            ],
+            "video_term": "H.265",
+            "release_group": "ToonsHub",
+            "file_extension": "mkv"
         }
     },
     {
-        "input": "[Koi-Raws] 2.5 Jigen no Ririsa - 01 「異次元の新入生」 (AT-X 1280x720 x264 AAC).ass",
+        "input": "[Erai-raws] NieR-Automata Ver1_1a - 02 [1080p][Multiple Subtitle][5BCD4615].mkv",
+        "mal_id": 51105,
+        "output": {
+            "release_group": "Erai-raws",
+            "title": "NieR-Automata Ver1_1a",
+            "episode": "02",
+            "video_resolution": "1080p",
+            "subtitles": "Multiple Subtitle",
+            "file_checksum": "5BCD4615",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "[Erai-raws] NieR-Automata Ver1_1a Part 2 - 03 [1080p][Multiple Subtitle][AAF0612D].mkv",
+        "mal_id": 56063,
+        "output": {
+            "release_group": "Erai-raws",
+            "title": "NieR-Automata Ver1_1a",
+            "part": "2",
+            "episode": "03",
+            "video_resolution": "1080p",
+            "subtitles": "Multiple Subtitle",
+            "file_checksum": "AAF0612D",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "Highschool.of.the.Dead.S00E01.v2.Drifters.of.the.Dead.1080p-Hi10p.BluRay.FLAC5.1.x264-CTR.[32FD04E5].mkv",
+        "mal_id": 8074,
+        "output": {
+            "title": "Highschool of the Dead",
+            "season": "00",
+            "episode": "01",
+            "release_version": "2",
+            "episode_title": "Drifters of the Dead",
+            "video_resolution": "1080p",
+            "video_term": [
+                "Hi10p",
+                "x264"
+            ],
+            "source": "BluRay",
+            "audio_term": [
+                "FLAC",
+                "5.1"
+            ],
+            "release_group": "CTR",
+            "file_checksum": "32FD04E5",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "[Kaleido-subs] Blue Archive the Animation - S01E07 - (WEB 1080p HEVC x265 10-bit E-AC3 2.0) [3B0015AF].mkv",
+        "mal_id": 54309,
+        "output": {
+            "release_group": "Kaleido-subs",
+            "title": "Blue Archive the Animation",
+            "season": "01",
+            "episode": "07",
+            "source": "WEB",
+            "video_resolution": "1080p",
+            "video_term": [
+                "HEVC",
+                "x265",
+                "10-bit"
+            ],
+            "audio_term": [
+                "E-AC3",
+                "2.0"
+            ],
+            "file_checksum": "3B0015AF",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "[Erai-raws] Hi no Tori: Eden no Sora - 01 ~ 04 [1080p DSNP WEBRip HEVC EAC3][MultiSub] [BATCH]",
+        "mal_id": 53720,
+        "output": {
+            "release_group": "Erai-raws",
+            "title": "Hi no Tori: Eden no Sora",
+            "episode": [
+                "01",
+                "04"
+            ],
+            "video_resolution": "1080p",
+            "source": [
+                "DSNP",
+                "WEBRip"
+            ],
+            "video_term": "HEVC",
+            "audio_term": "EAC3",
+            "subtitles": "MultiSub",
+            "release_information": "BATCH"
+        }
+    },
+    {
+        "input": "[CBM]_Monster_-_11_-_511_Kinderheim_[6C70C4E4].mkv",
+        "mal_id": 19,
+        "output": {
+            "release_group": "CBM",
+            "title": "Monster",
+            "episode": "11",
+            "episode_title": "511 Kinderheim",
+            "file_checksum": "6C70C4E4",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "[SubsPlease] Cardfight!! Vanguard will+Dress S2 - 08 (1080p) [D01C5C45].mkv",
+        "mal_id": 49819,
+        "output": {
+            "release_group": "SubsPlease",
+            "title": "Cardfight!! Vanguard will+Dress",
+            "season": "2",
+            "episode": "08",
+            "video_resolution": "1080p",
+            "file_checksum": "D01C5C45",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "Mahoutsukai Reimeiki E06v1.5 [1080p][AAC][JapDub][GerEngSub][Web-DL].mkv",
+        "mal_id": 48842,
+        "output": {
+            "title": "Mahoutsukai Reimeiki",
+            "episode": "06",
+            "release_version": "1.5",
+            "video_resolution": "1080p",
+            "audio_term": [
+                "AAC",
+                "JapDub"
+            ],
+            "source": "Web-DL",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "[Some-Stuffs]_Jojo's_Bizarre_Adventure_Diamond_is_Unbreakable_NCOP1a_(1920x1080_Blu-Ray_FLAC)_[343E8357].mkv",
+        "mal_id": 31933,
+        "output": {
+            "release_group": "Some-Stuffs",
+            "title": "Jojo's Bizarre Adventure Diamond is Unbreakable",
+            "type": "NCOP",
+            "episode": "1a",
+            "video_resolution": "1920x1080",
+            "source": "Blu-Ray",
+            "audio_term": "FLAC",
+            "file_checksum": "343E8357",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "Tokyo Mew Mew New S01E12-[1080p][BDRIP][x265.FLAC].mkv",
+        "mal_id": 41589,
+        "output": {
+            "title": "Tokyo Mew Mew New",
+            "season": "01",
+            "episode": "12",
+            "video_resolution": "1080p",
+            "source": "BDRIP",
+            "video_term": "x265",
+            "audio_term": "FLAC",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "2.5 Jigen no Ririsa E01 [1080p][E-AC-3][JapDub][GerSub][Web-DL].mkv",
+        "mal_id": 53802,
         "output": {
             "title": "2.5 Jigen no Ririsa",
             "episode": "01",
-            "episode_title": "異次元の新入生",
-            "video_resolution": "1280x720",
-            "video_term": "x264",
-            "audio_term": "AAC",
-            "file_extension": "ass"
+            "video_resolution": "1080p",
+            "audio_term": [
+                "E-AC-3",
+                "JapDub"
+            ],
+            "subtitles": "GerSub",
+            "source": "Web-DL",
+            "file_extension": "mkv"
         }
     },
     {
-        "input": "NieR Automata.Ver1.1a.S01E13.WEBRip.Netflix.ja[cc].srt",
-        "notes": "The title is improperly parsed, but it's hard/impossible to fix it.",
+        "input": "NEET Kunoichi to Naze ka Dousei Hajimemashita E01-E02 [1080p][AAC][JapDub][GerSub][Web-DL].mkv",
+        "mal_id": 58082,
         "output": {
-            "title": "NieR Automata.Ver1.1a.",
-            "season": "01",
-            "episode": "13",
-            "source": [
-                "WEBRip",
-                "Netflix"
+            "title": "NEET Kunoichi to Naze ka Dousei Hajimemashita",
+            "episode": [
+                "01",
+                "02"
             ],
-            "language": "ja",
-            "subtitles": "cc",
-            "file_extension": "srt"
+            "video_resolution": "1080p",
+            "audio_term": [
+                "AAC",
+                "JapDub"
+            ],
+            "subtitles": "GerSub",
+            "source": "Web-DL",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "[Erai-raws] aiomodarkelf - 02v2 [1080p ADN WEB-DL AVC AAC][MultiSub][94D7760F].mkv",
+        "mal_id": 59745,
+        "output": {
+            "release_group": "Erai-raws",
+            "title": "aiomodarkelf",
+            "episode": "02",
+            "release_version": "2",
+            "video_resolution": "1080p",
+            "source": [
+                "ADN",
+                "WEB-DL"
+            ],
+            "video_term": "AVC",
+            "audio_term": "AAC",
+            "subtitles": "MultiSub",
+            "file_checksum": "94D7760F",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "[DB] Made in Abyss [Dual Audio 10bit BD1080p][HEVC-x265]",
+        "mal_id": 34599,
+        "output": {
+            "release_group": "DB",
+            "title": "Made in Abyss",
+            "audio_term": "Dual Audio",
+            "video_term": [
+                "10bit",
+                "HEVC",
+                "x265"
+            ],
+            "source": "BD",
+            "video_resolution": "1080p"
+        }
+    },
+    {
+        "input": "[Cleo] Jigoku Shoujo | Hell Girl [Dual Audio 10bit DVD480p][HEVC-x265]",
+        "mal_id": 228,
+        "output": {
+            "release_group": "Cleo",
+            "title": "Jigoku Shoujo | Hell Girl",
+            "audio_term": "Dual Audio",
+            "video_term": [
+                "10bit",
+                "HEVC",
+                "x265"
+            ],
+            "source": "DVD",
+            "video_resolution": "480p"
+        }
+    },
+    {
+        "input": "[Sokudo] Mashle - S01-S02 v4 [1080p BD AV1][Dual Audio]",
+        "mal_id": [
+            52211,
+            55813
+        ],
+        "output": {
+            "release_group": "Sokudo",
+            "title": "Mashle",
+            "season": [
+                "01",
+                "02"
+            ],
+            "release_version": "4",
+            "video_resolution": "1080p",
+            "source": "BD",
+            "video_term": "AV1",
+            "audio_term": "Dual Audio"
+        }
+    },
+    {
+        "input": "[Sokudo] Dragon Ball S01-S03 001-068 [1080p BD AV1][dual audio]",
+        "mal_id": 223,
+        "output": {
+            "release_group": "Sokudo",
+            "title": "Dragon Ball",
+            "season": [
+                "01",
+                "03"
+            ],
+            "episode": [
+                "001",
+                "068"
+            ],
+            "video_resolution": "1080p",
+            "source": "BD",
+            "video_term": "AV1",
+            "audio_term": "dual audio"
+        }
+    },
+    {
+        "input": "[Trix] Kimetsu no Yaiba S01-05 [Dual Audio] [Multi Subs] (BD 720p AV1) - Demon Slayer VOSTFR (Batch)",
+        "mal_id": [
+            38000,
+            49926,
+            47778,
+            51019,
+            55701
+        ],
+        "output": {
+            "release_group": "Trix",
+            "title": "Kimetsu no Yaiba",
+            "season": [
+                "01",
+                "05"
+            ],
+            "audio_term": "Dual Audio",
+            "subtitles": "Multi Subs",
+            "source": "BD",
+            "video_resolution": "720p",
+            "video_term": "AV1",
+            "language": "VOSTFR",
+            "release_information": "Batch"
+        }
+    },
+    {
+        "input": "School Rumble Complete S01-S02 + OVA [576p] [x264] [Dual-Audio] [Eng-Subs]",
+        "mal_id": [
+            24,
+            846,
+            4015
+        ],
+        "output": {
+            "title": "School Rumble",
+            "release_information": "Complete",
+            "season": [
+                "01",
+                "02"
+            ],
+            "type": "OVA",
+            "video_resolution": "576p",
+            "video_term": "x264",
+            "audio_term": "Dual-Audio",
+            "language": "Eng"
+        }
+    },
+    {
+        "input": "[Erai-raws] Spy x Family Cour 2 - 01 ~ 13 [1080p][Multiple Subtitle]",
+        "mal_id": 50602,
+        "output": {
+            "release_group": "Erai-raws",
+            "title": "Spy x Family",
+            "part": "2",
+            "episode": [
+                "01",
+                "13"
+            ],
+            "video_resolution": "1080p",
+            "subtitles": "Multiple Subtitle"
+        }
+    },
+    {
+        "input": "[NanakoRaws] NieR Automata Ver1.1a (cour 2) (1080p)",
+        "mal_id": 51105,
+        "output": {
+            "release_group": "NanakoRaws",
+            "title": "NieR Automata Ver1.1a",
+            "part": "2",
+            "video_resolution": "1080p"
+        }
+    },
+    {
+        "input": "[9volt] Sousou no Frieren - 17-28 (Cour 2) (WEB 1080p)",
+        "mal_id": 52991,
+        "output": {
+            "release_group": "9volt",
+            "title": "Sousou no Frieren",
+            "episode": [
+                "17",
+                "28"
+            ],
+            "part": "2",
+            "source": "WEB",
+            "video_resolution": "1080p"
+        }
+    },
+    {
+        "input": "[NanakoRaws] Bleach - Sennen Kessen-hen cour 2 (1080p)",
+        "mal_id": 53998,
+        "output": {
+            "release_group": "NanakoRaws",
+            "title": "Bleach - Sennen Kessen-hen",
+            "part": "2",
+            "video_resolution": "1080p"
+        }
+    },
+    {
+        "input": "[Anime Time] Bleach: Thousand-Year Blood War (Cour 3) (2024) [1080p][HEVC 10bit x265][AAC][Multi Sub] (Bleach Season 17 - Bleach Sennen Kessen hen) [Batch]",
+        "mal_id": 56784,
+        "output": {
+            "release_group": "Anime Time",
+            "title": "Bleach: Thousand-Year Blood War",
+            "part": "3",
+            "year": "2024",
+            "video_resolution": "1080p",
+            "video_term": [
+                "HEVC",
+                "10bit",
+                "x265"
+            ],
+            "audio_term": "AAC",
+            "subtitles": "Multi Sub",
+            "season": "17",
+            "release_information": "Batch"
+        }
+    },
+    {
+        "input": "[Erai-raws] Ranma 1-2 (2024) - 03 [1080p][Multiple Subtitle]",
+        "mal_id": 59145,
+        "output": {
+            "release_group": "Erai-raws",
+            "title": "Ranma 1-2",
+            "year": "2024",
+            "episode": "03",
+            "video_resolution": "1080p",
+            "subtitles": "Multiple Subtitle"
+        }
+    },
+    {
+        "input": "[Erai-raws] Ranma 1_2 (2024) - 03 [1080p][Multiple Subtitle][EA841252].mkv",
+        "mal_id": 59145,
+        "output": {
+            "release_group": "Erai-raws",
+            "title": "Ranma 1 2",
+            "year": "2024",
+            "episode": "03",
+            "video_resolution": "1080p",
+            "subtitles": "Multiple Subtitle",
+            "file_checksum": "EA841252",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "[Genderbender] Ranma 1+2 (2024) - 01 [HEVC 1080p] [Dual Audio].mkv",
+        "mal_id": 59145,
+        "output": {
+            "release_group": "Genderbender",
+            "title": "Ranma 1+2",
+            "year": "2024",
+            "episode": "01",
+            "video_term": "HEVC",
+            "video_resolution": "1080p",
+            "audio_term": "Dual Audio",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "Ranma.1-2.2024.S01E11.You.I.Love.1080p.NF.WEB-DL.AAC2.0.H.264.MULTi-VARYG.mkv",
+        "mal_id": 59145,
+        "output": {
+            "title": "Ranma 1-2",
+            "year": "2024",
+            "season": "01",
+            "episode": "11",
+            "episode_title": "You I Love",
+            "video_resolution": "1080p",
+            "source": [
+                "NF",
+                "WEB-DL"
+            ],
+            "audio_term": [
+                "AAC",
+                "2.0"
+            ],
+            "video_term": "H.264",
+            "release_group": "VARYG",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "[Exiled-Destiny]_Ranma_½_TV_Ep001_(E5B63FCA).mkv",
+        "mal_id": 210,
+        "output": {
+            "release_group": "Exiled-Destiny",
+            "title": "Ranma ½ TV",
+            "type": "TV",
+            "episode": "001",
+            "file_checksum": "E5B63FCA",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "[Judas] Spy x Family (Season 1 Part 2) [1080p][HEVC x265 10bit][Multi-Subs] (Batch)",
+        "mal_id": 50602,
+        "output": {
+            "release_group": "Judas",
+            "title": "Spy x Family",
+            "season": "1",
+            "part": "2",
+            "video_resolution": "1080p",
+            "video_term": [
+                "HEVC",
+                "x265",
+                "10bit"
+            ],
+            "subtitles": "Multi-Subs",
+            "release_information": "Batch"
+        }
+    },
+    {
+        "input": "[Erai-raws] Vanitas no Karte 2nd Cour - 01 [1080p][Multiple Subtitle][DE38A9CD].mkv",
+        "mal_id": 49114,
+        "output": {
+            "release_group": "Erai-raws",
+            "title": "Vanitas no Karte",
+            "part": "2",
+            "episode": "01",
+            "video_resolution": "1080p",
+            "subtitles": "Multiple Subtitle",
+            "file_checksum": "DE38A9CD",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "[ADF] Love Live! Nijigasaki Gakuen School Idol Doukoukai Kanketsu-hen -Parte 1- (BD 1280x720 AAC 5.1+2.0)",
+        "mal_id": 55748,
+        "output": {
+            "release_group": "ADF",
+            "title": "Love Live! Nijigasaki Gakuen School Idol Doukoukai Kanketsu-hen",
+            "part": "1",
+            "source": "BD",
+            "video_resolution": "1280x720",
+            "audio_term": [
+                "AAC",
+                "5.1",
+                "2.0"
+            ]
+        }
+    },
+    {
+        "input": "[pat-e] The Devil is a Part-Timer! - Season 1 (BD 1080p AV1 Opus) [Dual Audio] | Hataraku Maou-sama! - S01",
+        "mal_id": 15809,
+        "output": {
+            "release_group": "pat-e",
+            "title": "The Devil is a Part-Timer!",
+            "season": "1",
+            "source": "BD",
+            "video_resolution": "1080p",
+            "video_term": "AV1",
+            "audio_term": [
+                "Opus",
+                "Dual Audio"
+            ]
+        }
+    },
+    {
+        "input": "[Judas] Sword Art Online S3 P2 - 01.mkv",
+        "mal_id": 39597,
+        "output": {
+            "release_group": "Judas",
+            "title": "Sword Art Online",
+            "season": "3",
+            "part": "2",
+            "episode": "01",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "My.Hero.Academia.S04.P2.CRF-16.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD",
+        "mal_id": 38408,
+        "output": {
+            "title": "My Hero Academia",
+            "season": "04",
+            "part": "2",
+            "video_resolution": "1080p",
+            "source": "Blu-Ray",
+            "video_term": [
+                "10-Bit",
+                "x265"
+            ],
+            "audio_term": [
+                "Dual-Audio",
+                "TrueHD"
+            ],
+            "release_group": "iAHD"
+        }
+    },
+    {
+        "input": "Chained.Soldier.S02E01.The.Commanders.Assembly.1080p.BILI.WEB-DL.AAC2.0.H.264-VARYG.mkv",
+        "mal_id": 58505,
+        "output": {
+            "title": "Chained Soldier",
+            "season": "02",
+            "episode": "01",
+            "episode_title": "The Commanders Assembly",
+            "video_resolution": "1080p",
+            "source": [
+                "BILI",
+                "WEB-DL"
+            ],
+            "audio_term": [
+                "AAC",
+                "2.0"
+            ],
+            "video_term": "H.264",
+            "release_group": "VARYG",
+            "file_extension": "mkv"
+        }
+    },
+    {
+        "input": "Chained Soldier S02E01 The Commanders Assembly 1080p BILI WEB-DL AAC2.0 H 264-VARYG (Mato Seihei no Slave, Multi-Subs)",
+        "mal_id": 58505,
+        "output": {
+            "title": "Chained Soldier",
+            "season": "02",
+            "episode": "01",
+            "episode_title": "The Commanders Assembly",
+            "video_resolution": "1080p",
+            "source": [
+                "BILI",
+                "WEB-DL"
+            ],
+            "audio_term": [
+                "AAC",
+                "2.0"
+            ],
+            "video_term": "H 264",
+            "release_group": "VARYG",
+            "subtitles": "Multi-Subs"
         }
     }
 ]

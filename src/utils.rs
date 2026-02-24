@@ -1,3 +1,4 @@
+use crate::tokenizer::Token;
 use phf::phf_map;
 use uncased::UncasedStr;
 
@@ -121,7 +122,10 @@ pub(crate) struct WindowsMut<'a, T, const SIZE: usize> {
 }
 
 impl<'a, T, const SIZE: usize> LendingIterator for WindowsMut<'a, T, SIZE> {
-    type Item<'this> = &'this mut [T; SIZE] where 'a: 'this;
+    type Item<'this>
+        = &'this mut [T; SIZE]
+    where
+        'a: 'this;
 
     fn next(&mut self) -> Option<Self::Item<'_>> {
         let result = self
@@ -138,4 +142,36 @@ impl<'a, T, const SIZE: usize> LendingIterator for WindowsMut<'a, T, SIZE> {
 pub(crate) fn windows_mut<T, const SIZE: usize>(slice: &mut [T]) -> WindowsMut<'_, T, SIZE> {
     assert_ne!(SIZE, 0);
     WindowsMut { slice, start: 0 }
+}
+
+pub(crate) fn find_prev_token<F>(
+    tokens: &[Token<'_>],
+    position: Option<usize>,
+    mut predicate: F,
+) -> Option<usize>
+where
+    F: FnMut(&Token<'_>) -> bool,
+{
+    let index = position.unwrap_or(tokens.len());
+    tokens[..index]
+        .iter()
+        .enumerate()
+        .rev()
+        .find_map(|(idx, t)| predicate(t).then_some(idx))
+}
+
+pub(crate) fn find_next_token<F>(
+    tokens: &[Token<'_>],
+    index: usize,
+    skip: bool,
+    predicate: F,
+) -> Option<usize>
+where
+    F: FnMut(&Token<'_>) -> bool,
+{
+    let offset = if skip { index + 1 } else { index };
+    tokens[offset..]
+        .iter()
+        .position(predicate)
+        .map(|idx| idx + offset)
 }
