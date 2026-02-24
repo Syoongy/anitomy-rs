@@ -10,9 +10,7 @@ license = "MPL-2.0"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-# Use this until it gets merged (and released) upstream:
-# https://github.com/rust-phf/rust-phf/pull/309
-phf = { git = "https://github.com/edef1c/rust-phf/", rev = "3a86c8a152b587aa572bd17e318b3cf61133040d", features = ["macros", "uncased"] }
+phf = { version = "0.13.1", features = ["macros", "uncased"] }
 uncased = "0.9.10"
 regex = "1"
 serde = { version = "1.0.200", features = ["derive"], optional = true }
